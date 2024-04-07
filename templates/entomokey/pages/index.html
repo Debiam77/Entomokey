@@ -1,0 +1,52 @@
+{% extends "entomokey/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row gx-6 align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <h2 class="tituloEsquerdo">Descubra como identificar insetos por meio de chave dicotômica!</h2>
+            <p class="textoEsquerdo">Venha explorar a biodiversidade dos insetos.
+                Utilizando <span style="color: #5D781A;">chaves dicotômicas</span> ilustrativas que facilitarão e tornarão
+                agradável o processo de identificação.</p>
+                <div class="d-flex justify-content-center mt-3 mt-md-0">
+                    <button type="button" class="btn btnEsquerdo">Cadastrar-se</button>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center mt-3 mt-md-0">
+                <img src="{% static 'entomokey/images/Elemento1.png' %}" alt="Descrição da Imagem" class="img-fluid" style="max-width: 70%;">
+            </div>
+        </div>
+    </div>
+    
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="circular-card">
+                    <img src="{% static 'entomokey/images/icone1.png' %}" alt="">
+                </div>
+                <button class="btn btn-success btn-circular">Quiz</button>
+                <p class="text-center mainTxt">Descubra de maneira intuitiva a como saber das ancestralidades dos insetos.</p>
+                <p class="text-center subTxt">Cadastrar-se para saber mais</p>
+            </div>
+            
+            <div class="col-sm-4">
+                <div class="circular-card">
+                    <img src="{% static 'entomokey/images/icone2.png' %}" alt="">
+                </div>
+                <button class="btn btn-success btn-circular">Localização</button>
+                <p class="text-center mainTxt">Saiba em quais ambientes e onde são localizados os insetos.</p>
+                <p class="text-center subTxt">Cadastrar-se para saber mais</p>
+            </div>
+            
+            <div class="col-sm-4">
+                <div class="circular-card">
+                    <img src="{% static 'entomokey/images/icone3.png' %}" alt="">
+                </div>
+                <button class="btn btn-success btn-circular">Ilustração</button>
+                <p class="text-center mainTxt">O site irá fornecer imagens para a identificação dos insetos.</p>
+                <p class="text-center subTxt">Cadastrar-se para saber mais</p>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

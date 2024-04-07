@@ -1,0 +1,21 @@
+{% extends "entomokey/base.html" %}
+
+{% block content %}
+<div class="container">
+    <h3>Deseja pesquisar por algum inseto?</h3>
+    <form class="search-group" action="{% url 'entomokey:search' %}" method='POST'>
+        {% csrf_token %}
+        <input type="text" name="search_input" id="search_input">
+        <button type="submit">Pesquisar</button>
+    </form>
+    <div class="insect-list">
+        {% for result in search_results %}
+            <a class="result">
+                <p>{{ result.name }}</p>
+            </a>
+        {% empty %}
+            <p>Resultados não encontrados</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

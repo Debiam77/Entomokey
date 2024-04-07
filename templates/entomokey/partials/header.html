@@ -1,0 +1,35 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'entomokey/images/LogoPibic.png' %}" alt="Logo" class="logo" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+        <form class="d-flex flex-grow-1 justify-content-lg-start my-2 my-lg-0" action="" method="">
+          <div class="col-12 col-md-6 col-lg-4 px-lg-0 search-box">
+            <i class="bi bi-search"></i>
+            <input class="form-control me-2" type="search" placeholder="Inseto..." aria-label="Search">
+          </div>
+        </form>
+        <div class="d-flex flex-column flex-lg-row justify-content-center mt-2 mt-lg-0">
+          <a class="btn btnNav me-lg-2 mb-2 mb-lg-0" type="button">QUEM SOMOS</a>
+          <a class="btn btnNav me-lg-2 mb-2 mb-lg-0" type="button">INÍCIO</a>
+          {% if request.user.is_authenticated %}
+            {% if request.user.first_name %}
+              <a class="btn btnNav mb-2 mb-lg-0" type="button" href="#">{{ request.user.first_name }}</a>
+            {% else %}
+              <a class="btn btnNav mb-2 mb-lg-0" type="button" href="#">{{ request.user.username }}</a>
+            {% endif %}
+            <a class="btn btnNav mb-2 mb-lg-0" type="button" href="{% url 'entomokey:user_logout' %}">LOGOUT</a>
+          {% else %}
+            <a class="btn btnNav mb-2 mb-lg-0" type="button" href="{% url 'entomokey:user_login' %}">ENTRAR</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </nav>

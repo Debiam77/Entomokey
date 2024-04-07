@@ -1,0 +1,111 @@
+/* Primeira Parte */
+.form-control{
+    border: 2px solid #20320B;
+    border-radius: 15px;
+}
+.search-box {
+    position: relative;
+}
+
+.search-box .bi-search {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(0,0,0,.5);
+}
+
+.search-box input {
+    padding-left: 30px; /* Espaço para o ícone */
+}
+
+
+
+/* Segunda Parte */
+.tituloEsquerdo{
+    color: #37B600;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.textoEsquerdo{
+    color: #2D340C;
+    font-weight: bold;
+}
+
+.btnEsquerdo{
+    color: white;
+    background-color: #37B600;
+    border-radius: 15px;
+}
+
+
+
+/* Terceira Parte */
+.circular-card {
+    border-radius: 50%;
+    width: 150px;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto 10px;
+    /* Para centralizar o conteúdo verticalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #174B00;
+  }
+
+  /* Ajustar o botão para alinhar corretamente abaixo do card circular */
+  .btn-circular {
+    display: block;
+    width: 170px;
+    margin: 10px auto;
+    margin-top: -25px;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    background-color: #37B600;
+  }
+  .mainTxt{
+    color: #2D340C;
+    font-weight: bold;
+  }
+  .subTxt{
+    color: #3BC200;
+  }
+
+
+
+  /* Quarta Parte */
+  .footer {
+    position: relative;
+    background-color: black;
+    padding: 20px 0;
+  }
+  .footer-img {
+    position: absolute;
+    top: 0;
+    width: 50px; /* ajuste conforme necessário */
+    height: auto;
+  }
+  .footer-img.left {
+    left: 0;
+  }
+  .footer-img.right {
+    right: 0;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo img {
+    max-height: 50px; /* ajuste conforme necessário */
+    margin: 0 15px;
+  }
+  .footer-text {
+    text-align: center;
+    margin-top: 20px;
+  }

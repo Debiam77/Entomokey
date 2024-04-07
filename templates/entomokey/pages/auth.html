@@ -1,0 +1,36 @@
+{% extends "entomokey/base.html" %}
+{% load static %}
+
+{% block head_content %}
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'entomokey/css/font-awesome.css' %}">
+<link rel="stylesheet" href="{% static 'entomokey/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'entomokey/css/style.css' %}">
+{% endblock head_content %}
+
+{% block content %}
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 contents">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <div class="form-block">
+                            {% include "entomokey/forms/auth-form.html" %}
+                            {% if messages %}
+                                {% for message in messages %}
+                                    {{ message }}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static 'entomokey/js/main.js' %}"></script>
+{% endblock scripts %}
