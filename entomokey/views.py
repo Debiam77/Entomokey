@@ -7,6 +7,8 @@ from .models import Insect
 
 
 def index(request):
+    #if request.user.is_authenticated():
+
     return render(request, 'entomokey/pages/index.html',{
         'user': request.user,
     })

@@ -10,7 +10,13 @@
                 Utilizando <span style="color: #5D781A;">chaves dicotômicas</span> ilustrativas que facilitarão e tornarão
                 agradável o processo de identificação.</p>
                 <div class="d-flex justify-content-center mt-3 mt-md-0">
-                    <button type="button" class="btn btnEsquerdo">Cadastrar-se</button>
+
+                    {% if request.user.is_authenticated %}
+                        <button type="button" class="btn btnEsquerdo">Você já está logado</button>
+                    {% else %}
+                         <a href="{% url 'entomokey:user_register' %}" type="button" class="btn btnEsquerdo">Cadastrar-se</a>
+                    {% endif %}
+                    
                 </div>
             </div>
             <div class="col-md-6 d-flex justify-content-center mt-3 mt-md-0">
@@ -27,7 +33,14 @@
                 </div>
                 <button class="btn btn-success btn-circular">Quiz</button>
                 <p class="text-center mainTxt">Descubra de maneira intuitiva a como saber das ancestralidades dos insetos.</p>
-                <p class="text-center subTxt">Cadastrar-se para saber mais</p>
+                
+                {% if request.user.is_authenticated %}
+                    <p class="text-center subTxt">Você já está logado</p>
+                {% else %}
+                    <p class="text-center subTxt">Cadastrar-se para saber mais</p>
+                {% endif %}
+
+
             </div>
             
             <div class="col-sm-4">
